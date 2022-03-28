@@ -21,7 +21,7 @@ const Cards = () => {
 
   const renderCard = (card, index) => {
     return (
-      <Card style={{ width: "18rem" }} key={index}>
+      <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={card.image} />
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
@@ -30,6 +30,6 @@ const Cards = () => {
       </Card>
     );
   };
-  return <div className="App">{footbal.map(renderCard)}</div>;
+  return <div className="App">{footbal(renderCard)}</div>;
 };
 export default Cards;
